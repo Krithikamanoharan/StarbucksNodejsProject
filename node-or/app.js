@@ -17,7 +17,7 @@ app.use(cookieParser());
 const dbURI = "mongodb+srv://Krithika18:leosmileaf@cluster0.cst58.mongodb.net/project?";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(process.env.PORT || 3000))
   .catch(err => console.log(err));
 
 // register view engine
